@@ -4,9 +4,15 @@
 
 ## 使用方法
 
-参考： <https://sentences-bundle.hitokoto.cn>
+1. 安装poetry
+2. 点击安装poetry依赖脚本文件创建该目录的虚拟环境
+3. 编辑config.json文件自定义你想要的port端口
+4. 点击start脚本文件即可使用
+5. 如有更新自行前往https://github.com/hitokoto-osc/sentences-bundle下载sentences目录内json文件替换
 
 ## 使用须知
+
+参考： <https://sentences-bundle.hitokoto.cn>
 
 1. 本库遵循 AGPL 开源授权，您在使用本库时需要遵循 AGPL 授权的相关规定。这通常意味着：您在使用、分发、修改、扩充等涉及本库的操作时您需要开源您的修改作品。
 *  除我们提供的超链接调用方式不受 AGPL 的开源，传染影响，其余使用方式都需要遵循 AGPL 授权。
