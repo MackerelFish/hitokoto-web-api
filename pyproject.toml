@@ -6,7 +6,7 @@ authors = ["MackerelFish <1305974020@qq.com>"]
 license = "AGPL"
 
 [[tool.poetry.source]]
-name = "ali"
+name = "tsinghua"
 default = true
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 
