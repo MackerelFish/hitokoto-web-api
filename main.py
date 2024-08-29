@@ -54,7 +54,7 @@ def init_hitokoto():
     # 遍历文件夹
     for root, dirs, files in os.walk(hitokoto_path):
         for file in files:
-            # 检查文件扩展名，这里以.txt文件为例
+            # 检查文件扩展名，读取文件
             if file.endswith('.json'):
                 file_path = os.path.join(root, file)
                 logger.info(f"正在读取文件: {file_path}")
@@ -64,6 +64,7 @@ def init_hitokoto():
                     with open(file_path, 'r', encoding='utf-8') as f:  # 指定编码为utf-8，以防乱码
                         _data = json.load(f)
                         for v in _data:
+                            # 添加文件内容到集合内
                             hitokoto_data.append(v)
                         logger.info(f"读取文件{file_path}完成")
                 except Exception as e:
