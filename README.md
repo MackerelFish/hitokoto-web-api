@@ -24,7 +24,9 @@
 3. 编辑config.json文件自定义你想要的port端口
 4. 点击start脚本文件运行api
 5. 使用接口为http://yourhost:yourport/HITOKOTO
-6. 返回值示例{"code":200,"message":"success","data":{"id":5169,"uuid":"833a4fb8-73e7-473a-ac81-7d0398630dd6","hitokoto":"没心没肺，活着不累。","type":"f","from":"网络","from_who":null,"creator":"2247","creator_uid":5148,"reviewer":4756,"commit_from":"web","created_at":"1582967894","length":10},"hitokoto":"没心没肺，活着不累。"}
-7. data字段为该一言完整数据集，hitokoto字段为纯文字
+
+返回值示例{"code":200,"message":"success","data":{"id":5169,"uuid":"833a4fb8-73e7-473a-ac81-7d0398630dd6","hitokoto":"没心没肺，活着不累。","type":"f","from":"网络","from_who":null,"creator":"2247","creator_uid":5148,"reviewer":4756,"commit_from":"web","created_at":"1582967894","length":10},"hitokoto":"没心没肺，活着不累。"}
+
+## data字段为该一言完整数据集，hitokoto字段为纯文字
 
 ## 如有更新自行前往 https://github.com/hitokoto-osc/sentences-bundle 下载sentences目录内json文件替换
