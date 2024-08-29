@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "hitokoto_api"
+version = "1.0.0"
+description = "不论在哪里，总有那么几个句子能穿透你的心。把这些句子汇聚起来，传递更多的感动。简单来说，一言指的就是一句话，可以是动漫中的台词，也可以是网络上的各种小段子。留下你所喜欢的那一句话，与大家分享，这就是一言存在的目的。"
+authors = ["https://github.com/A-kirami/nonebot-plugin-hitokoto"]
+license = "AGPL"
+
+[[tool.poetry.source]]
+name = "ali"
+default = true
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.86.0"
+fire = "^0.4.0"
+Flask = "^2.2.2"
+Flask-Babel = "^2.0.0"
+uvicorn = "^0.19.0"
+python-multipart = "^0.0.5"
+
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.nonebot]
