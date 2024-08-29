@@ -39,8 +39,3 @@ def new_logger(name, debug=True):
 
 def set_name(longger,name):
     logger = logging.getLogger(name)
-
-#def remove_handler(logger):
-#    for handler in list(logger.handlers):
-#        logger.removeHandler(handler)
-#    return
