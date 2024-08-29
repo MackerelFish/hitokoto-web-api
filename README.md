@@ -2,18 +2,12 @@
 
 一言开源社区官方提供的语句库，系 `hitokoto.cn` 数据打包集合。语句接口默认使用此库。
 
-## 使用方法
-
-1. 安装poetry
-2. 点击安装poetry依赖脚本文件创建该目录的虚拟环境
-3. 编辑config.json文件自定义你想要的port端口
-4. 点击start脚本文件即可使用
-5. 如有更新自行前往https://github.com/hitokoto-osc/sentences-bundle下载sentences目录内json文件替换
-
 ## 使用须知
+## 本项目基于 https://github.com/hitokoto-osc/sentences-bundle 库
+## Fork自2024.8.30，添加基于Fastapi运行的HTTP GET接口，测试运行于Python3.10.9510环境下，建议运行在3.10版本
 
 参考： <https://sentences-bundle.hitokoto.cn>
-
+## 原库使用须知
 1. 本库遵循 AGPL 开源授权，您在使用本库时需要遵循 AGPL 授权的相关规定。这通常意味着：您在使用、分发、修改、扩充等涉及本库的操作时您需要开源您的修改作品。
 *  除我们提供的超链接调用方式不受 AGPL 的开源，传染影响，其余使用方式都需要遵循 AGPL 授权。
 2. 本库著作权并非完全由一言网持有。
@@ -22,3 +16,12 @@
 3. 本库由系统自动维护，这意味我们不受理任何 issues, pull request。如果您有相关问题，请通过电邮或者工单系统向我们反馈。
 
 其他条款待补充。
+
+## 使用方法
+
+1. 安装poetry
+2. 点击安装poetry依赖脚本文件创建该目录的虚拟环境
+3. 编辑config.json文件自定义你想要的port端口
+4. 点击start脚本文件即可使用
+
+## 如有更新自行前往 https://github.com/hitokoto-osc/sentences-bundle 下载sentences目录内json文件替换
