@@ -51,7 +51,7 @@ async def get_hitokoto_result(data:str="json"):
 
 def init_hitokoto():
     # 遍历sentences文件夹
-    for root, dirs, files in os.walk(f'{path}/sentences'):
+    for root, dirs, files in os.walk(f'{path}\sentences'):
         for file in files:
             # 检查文件扩展名，读取文件
             if file.endswith('.json'):
