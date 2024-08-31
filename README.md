@@ -4,7 +4,7 @@
 
 ## 使用须知
 ## 本项目基于 https://github.com/hitokoto-osc/sentences-bundle 库
-## 自建本地无限速一言api接口，Fork自2024.8.30，添加基于Fastapi运行的HTTP GET接口，测试运行于Python3.10.9510环境下，建议运行在3.10版本
+## windows自建本地无限速一言api接口，添加基于Fastapi运行的HTTP GET接口，测试运行于Python3.10.9510环境下，建议运行在3.10版本，linux请自行修改启动脚本
 
 参考： <https://sentences-bundle.hitokoto.cn>
 ## 原库使用须知
