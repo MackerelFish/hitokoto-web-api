@@ -27,6 +27,20 @@
 5. 点击start脚本文件运行api
 6. 使用接口为 http://yourhost:yourport/HITOKOTO ，获取一条随机一言
 
+## 调用方法
+`GET`
+## 参数说明
+参数名|类型|含义
+-|-|-|-
+data|string|获取你想要的数据格式
+
+### 数据格式说明
+参数值|含义
+-|-
+json|返回 JSON 格式数据
+text|返回纯文字一言
+空|默认返回 JSON 格式数据
+
 返回值示例
 ```json
 {
@@ -45,11 +59,8 @@
         "commit_from":"web",
         "created_at":"1582967894",
         "length":10
-    },
-    "hitokoto":"没心没肺，活着不累。"
+    }
 }
 ```
-
-## data字段为该一言完整数据集，hitokoto字段为纯文字
 
 ## 如有更新自行前往 https://github.com/hitokoto-osc/sentences-bundle 下载sentences目录内json文件替换
