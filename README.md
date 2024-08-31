@@ -4,7 +4,7 @@
 
 ## 使用须知
 ## 本项目数据完全基于 https://github.com/hitokoto-osc/sentences-bundle 库
-## 如有数据更新请自行前往原库下载所有json文件替换
+## 如有数据更新请自行前往原库下载sentences文件夹内json文件替换
 ## windows自建本地无限速一言api接口，添加基于Fastapi运行的HTTP GET接口，测试运行于Python3.10.9510环境下，建议运行在3.10版本，linux请自行修改启动脚本
 
 参考： <https://sentences-bundle.hitokoto.cn>
@@ -31,7 +31,7 @@
 `GET`
 ## 参数说明
 参数名|类型|含义
--|-|-|-
+-|-|-
 data|string|获取你想要的数据格式
 
 ### 数据格式说明
@@ -41,7 +41,7 @@ json|返回 JSON 格式数据
 text|返回纯文字一言
 空|默认返回 JSON 格式数据
 
-返回值示例
+默认参数返回值示例
 ```json
 {
     "code":200,
