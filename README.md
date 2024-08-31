@@ -3,7 +3,8 @@
 一言开源社区官方提供的语句库，系 `hitokoto.cn` 数据打包集合。语句接口默认使用此库。
 
 ## 使用须知
-## 本项目基于 https://github.com/hitokoto-osc/sentences-bundle 库
+## 本项目数据完全基于 https://github.com/hitokoto-osc/sentences-bundle 库
+## 如有数据更新请自行前往原库下载所有json文件替换
 ## windows自建本地无限速一言api接口，添加基于Fastapi运行的HTTP GET接口，测试运行于Python3.10.9510环境下，建议运行在3.10版本，linux请自行修改启动脚本
 
 参考： <https://sentences-bundle.hitokoto.cn>
