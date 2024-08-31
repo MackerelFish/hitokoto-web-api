@@ -1,4 +1,4 @@
-# 导入Flask类
+# 导入FastAPI类
 from fastapi import FastAPI,Body,status
 from fastapi.responses import JSONResponse, Response
 from typing import Union
@@ -27,7 +27,7 @@ def reponse(*, code=200,data: Union[list, dict, str],message="Success",hitokoto=
         }
     )
 
-# 使用当前模块的名称构建Flask app
+# 使用当前模块的名称构建FastAPI app
 app = FastAPI()
 
 logger = new_logger('HITOKOTO-MAIN', False)
