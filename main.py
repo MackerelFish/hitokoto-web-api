@@ -30,7 +30,7 @@ def reponse(*, code=200,data: Union[list, dict, str],message="Success",hitokoto=
 
 path = os.getcwd()
 config = json.load(open('./config.json', 'r', encoding='utf8'))
-# 使用当前模块的名称构建Flask app
+# 使用当前模块的名称构建FastAPI app
 app = FastAPI()
 
 logger = new_logger('HITOKOTO-MAIN', False)
