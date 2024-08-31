@@ -14,7 +14,7 @@
 
 ## 使用方法
 
-1. 下载代码到本地你想存放的目录
+1. 下载本仓库到本地你想存放的目录
 2. pip安装poetry
 3. 点击安装poetry依赖脚本文件创建该目录的虚拟环境
 4. 编辑config.json文件自定义你想要的port端口
@@ -57,5 +57,3 @@ text|返回纯文字一言
     }
 }
 ```
-
-## 如有更新自行前往 https://github.com/hitokoto-osc/sentences-bundle 下载sentences目录内json文件替换
