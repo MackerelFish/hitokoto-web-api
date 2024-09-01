@@ -17,9 +17,9 @@
 1. 下载本仓库到本地你想存放的目录
 2. pip安装poetry
 3. 点击安装poetry依赖脚本文件创建该目录的虚拟环境
-4. 编辑config.json文件自定义你想要的port端口
+4. 编辑config.json文件，本地部署将host修改成127.0.0.1，局域网部署将host修改成0.0.0.0，post自定义你想要的端口
 5. 点击start脚本文件运行api
-6. 使用接口为 http://yourhost:yourport/HITOKOTO ，获取一条随机一言
+6. 使用接口为 http://host:port/HITOKOTO ，获取一条随机一言
 
 ## 调用方法
 `GET`

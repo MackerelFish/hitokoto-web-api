@@ -76,4 +76,4 @@ if __name__ == '__main__':
     start = time.time()
     init_hitokoto()
     logger.info(f"HITOKOTO初始化耗时：{time.time() - start}")
-    uvicorn.run(app, host="0.0.0.0", port=int(config['port']),access_log=strtobool(config['api_log']))
+    uvicorn.run(app, host=int(config['host']), port=int(config['port']),access_log=strtobool(config['api_log']))
