@@ -31,10 +31,11 @@ def reponse(*, code=200,data: Union[list, dict, str],message="Success") -> Respo
 app = FastAPI()
 
 logger = new_logger('HITOKOTO-MAIN', False)
+r_logger = new_logger('REDIRECT', False)
 
 @app.get("/")
 async def root():
-    logger.info(f'Redirecting To /HITOKOTO')
+    r_logger.info(f'Redirecting To /HITOKOTO')
     return RedirectResponse(url="/HITOKOTO")
 
 @app.get("/HITOKOTO", response_class=JSONResponse)
