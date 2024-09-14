@@ -50,7 +50,7 @@ async def get_hitokoto_result(data:str="json"):
         return reponse(data=hitokoto_result,code=200,message="success")
     else:
         _msg = "未读取到一言，即将重新读取"
-        logger.warn(_msg)
+        logger.error(_msg)
         print(_msg)
         init_hitokoto()
         return reponse(data={'msg':_msg},code=500,message="error")
