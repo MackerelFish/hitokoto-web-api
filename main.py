@@ -17,7 +17,7 @@ config = json.load(open('./config.json', 'r', encoding='utf8'))
 def get_hitokoto_count():
     return len(hitokoto_data)
 
-def reponse(*, code=200,data: Union[list, dict, str],message="Success",hitokoto="") -> Response:
+def reponse(*, code=200,data: Union[list, dict, str],message="Success") -> Response:
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={
