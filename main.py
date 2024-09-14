@@ -1,6 +1,6 @@
 # 导入FastAPI类
 from fastapi import FastAPI,Body,status
-from fastapi.responses import JSONResponse, Response
+from fastapi.responses import JSONResponse, Response, RedirectResponse
 from typing import Union
 import time
 import os
@@ -31,6 +31,12 @@ def reponse(*, code=200,data: Union[list, dict, str],message="Success",hitokoto=
 app = FastAPI()
 
 logger = new_logger('HITOKOTO-MAIN', False)
+
+@app.get("/")
+async def root():
+    logger.info(f'Redirecting To /HITOKOTO')
+    return RedirectResponse(url="/HITOKOTO")
+
 @app.get("/HITOKOTO", response_class=JSONResponse)
 async def get_hitokoto_result(data:str="json"):
     hitokoto_count = get_hitokoto_count()
