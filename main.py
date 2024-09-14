@@ -1,5 +1,5 @@
 # 导入FastAPI类
-from fastapi import FastAPI,Body,status
+from fastapi import FastAPI,status,Request
 from fastapi.responses import JSONResponse, Response, RedirectResponse
 from typing import Union
 import time
@@ -38,7 +38,10 @@ async def root():
     return RedirectResponse(url="/HITOKOTO")
 
 @app.get("/HITOKOTO", response_class=JSONResponse)
-async def get_hitokoto_result(data:str="json"):
+async def get_hitokoto_result(request: Request, data:str="json"):
+    client_ip = get_client_ip(request)
+    _url = f'{client_ip}/HITOKOTO/data?={data}'
+    logger.info(f'url:{_url}')
     hitokoto_count = get_hitokoto_count()
     if hitokoto_count>0:
         radom_hitokoto = random.randint(0,hitokoto_count-1)
@@ -54,6 +57,15 @@ async def get_hitokoto_result(data:str="json"):
         print(_msg)
         init_hitokoto()
         return reponse(data={'msg':_msg},code=500,message="error")
+
+def get_client_ip(request: Request):
+    x_forwarded_for = request.headers.get("x-forwarded-for")
+    if x_forwarded_for:
+        # x-forwarded-for 可能包含多个 IP 地址，以逗号分隔
+        client_ip = x_forwarded_for.split(",")[0].strip()
+    else:
+        client_ip = request.client.host
+    return client_ip
 
 def init_hitokoto():
     # 遍历sentences文件夹
@@ -82,4 +94,4 @@ if __name__ == '__main__':
     start = time.time()
     init_hitokoto()
     logger.info(f"HITOKOTO初始化耗时：{time.time() - start}")
-    uvicorn.run(app, host=int(config['host']), port=int(config['port']),access_log=strtobool(config['api_log']))
+    uvicorn.run(app, host=str(config['host']), port=int(config['port']),access_log=strtobool(config['api_log']))
