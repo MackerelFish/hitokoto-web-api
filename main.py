@@ -36,15 +36,15 @@ r_logger = new_logger('REDIRECT', False)
 @app.get("/")
 async def root(request: Request):
     client_ip = get_client_ip(request)
-    _url = f'{client_ip}/'
-    r_logger.info(f'url:{_url} Redirecting To /HITOKOTO')
+    _url = f'{client_ip}'
+    r_logger.info(f'Client:{_url} Redirecting To /HITOKOTO')
     return RedirectResponse(url="/HITOKOTO")
 
 @app.get("/HITOKOTO", response_class=JSONResponse)
 async def get_hitokoto_result(request: Request, data:str="json"):
     client_ip = get_client_ip(request)
     _url = f'{client_ip}/HITOKOTO/data?={data}'
-    logger.info(f'url:{_url}')
+    logger.info(f'Client:{_url}')
     hitokoto_count = get_hitokoto_count()
     if hitokoto_count>0:
         radom_hitokoto = random.randint(0,hitokoto_count-1)
