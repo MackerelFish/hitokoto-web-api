@@ -34,8 +34,10 @@ logger = new_logger('HITOKOTO-MAIN', False)
 r_logger = new_logger('REDIRECT', False)
 
 @app.get("/")
-async def root():
-    r_logger.info(f'Redirecting To /HITOKOTO')
+async def root(request: Request):
+    client_ip = get_client_ip(request)
+    _url = f'{client_ip}/'
+    r_logger.info(f'url:{_url} Redirecting To /HITOKOTO')
     return RedirectResponse(url="/HITOKOTO")
 
 @app.get("/HITOKOTO", response_class=JSONResponse)
