@@ -43,7 +43,7 @@ async def root(request: Request):
 @app.get("/HITOKOTO", response_class=JSONResponse)
 async def get_hitokoto_result(request: Request, data:str="json"):
     client_ip = get_client_ip(request)
-    _url = f'{client_ip}/HITOKOTO/data?={data}'
+    _url = f'{client_ip}/HITOKOTO?data={data}'
     logger.info(f'Client:{_url}')
     hitokoto_count = get_hitokoto_count()
     if hitokoto_count>0:
