@@ -6,6 +6,7 @@
 ## 本项目数据完全基于 https://github.com/hitokoto-osc/sentences-bundle 库
 ## 如有数据更新请自行前往原库下载sentences文件夹内json文件替换
 ## windows自建本地无限速一言api接口，添加基于Fastapi运行的HTTP GET接口，测试运行于Python3.10.9510环境下，建议运行在3.10版本，linux请自行修改启动脚本
+## 本项目docker版本 https://github.com/MackerelFish/hitokoto-web-docker
 
 ## 使用须知
 
